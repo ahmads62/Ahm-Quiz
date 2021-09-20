@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    
+    <title>Java Script Quiz Page</title>
+</head>
+    <div class="highscore"> 
+        <a href="highscores.html">View High Score</a> 
+    </div>
+    
+    <div class="score">Score:<span id="score">0</span></div>
+    <div class="timer">Time Left:<span id="time">0</span> </div>
+<body>
+    <main class="wrapper">
+        
+        <section id="quizSection" class="quiz">
+            <h1>Java Script Quiz</h1>
+            <p>
+                Time boxed and Negative marking, incorrect answers will deduct your
+                score/time by ten seconds!
+            </p>
+            <button id="start">Start Quiz</button>
+        </section>
+        
+        <section id="questionSection" class="hide"> 
+            <h2 id="currQuestion">current question </h2>
+
+            <div class="progress">                
+                <p  id="progressText">Question</p>
+                <div id="progressBar">
+                    <div id="progressBarFull"></div>
+                </div>
+            </div>
+
+            <article id="options" class="options"> </article>  
+        </section>
+        
+        <section id="endSection" class="hide">
+            <article>
+                <h2>Save Scores</h2>
+                <p>Your final score is: <span id="final-score"></span>.</p>
+                <div id="init">
+                <p> 
+                    Enter initials: 
+                    <input type="text" id="initials" minlength="3" maxlength="8" 
+                           pattern="[A-Za-z]" title="Three letter Initials"/>
+                    <button id="submit">Submit</button>
+                </p>
+                </div>
+                <div id="err" class="hide"></div>
+            </article>
+        </section>    
+
+        <div id="showAnswer"></div>
+    
+    </main>
+
+    <script src="./js/questions.js"></script> 
+    <script src="./js/quiz.js"></script>  
+
+</body>
+</html>
